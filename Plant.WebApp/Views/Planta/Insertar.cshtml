@@ -1,0 +1,80 @@
+﻿@model Plant.WebApp.Models.Planta
+
+<div class="form-container">
+    <h2>📄 Agregar nueva planta</h2>
+
+    <!-- Mensaje de éxito -->
+    @if (TempData["MensajeAgregar"] != null)
+    {
+        <div class="success-message">
+            @TempData["MensajeAgregar"]
+        </div>
+    }
+    else
+    {
+        <!-- Mensaje de error general si no se completaron todos los campos -->
+        @if (TempData["ErrorCampos"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["ErrorCampos"]
+            </div>
+        }
+
+        <form asp-action="Insertar" method="post">
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label"></label>
+                <input asp-for="Nombre" class="form-control" placeholder="Nombre de la planta" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="NombreCientifico" class="form-label"></label>
+                <input asp-for="NombreCientifico" class="form-control" placeholder="Nombre científico" />
+                <span asp-validation-for="NombreCientifico" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Origen" class="form-label"></label>
+                <input asp-for="Origen" class="form-control" placeholder="Origen" />
+                <span asp-validation-for="Origen" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Descripcion" class="form-label"></label>
+                <textarea asp-for="Descripcion" class="form-control" placeholder="Descripción"></textarea>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="CuidadosBasicos" class="form-label"></label>
+                <textarea asp-for="CuidadosBasicos" class="form-control" placeholder="Cuidados básicos"></textarea>
+                <span asp-validation-for="CuidadosBasicos" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ClimaIdeal" class="form-label"></label>
+                <input asp-for="ClimaIdeal" class="form-control" placeholder="Clima ideal" />
+                <span asp-validation-for="ClimaIdeal" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Floracion" class="form-label"></label>
+                <input asp-for="Floracion" class="form-control" placeholder="Floración" />
+                <span asp-validation-for="Floracion" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="AlturaMaxima" class="form-label"></label>
+                <input asp-for="AlturaMaxima" class="form-control" placeholder="Altura máxima" />
+                <span asp-validation-for="AlturaMaxima" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ImagenUrl" class="form-label"></label>
+                <input asp-for="ImagenUrl" class="form-control" placeholder="URL o ruta de la imagen" />
+                <span asp-validation-for="ImagenUrl" class="text-danger"></span>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn-pastel">Agregar planta</button>
+                <a asp-action="Index" class="btn-cancel-pastel">Cancelar</a>
+            </div>
+        </form>
+    }
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

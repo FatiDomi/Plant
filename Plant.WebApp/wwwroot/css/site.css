@@ -1,0 +1,251 @@
+/* ----------------- HTML y fuentes ----------------- */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* ----------------- Focus para botones y formularios ----------------- */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* ----------------- Fondo ----------------- */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url('/images/fondo.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ----------------- Títulos ----------------- */
+.titulo-buscador {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #A8D5BA;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ----------------- Overlay y contenedor ----------------- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+.no-results-wrapper {
+    margin-top: 15px;
+}
+
+.no-results-message {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white; 
+    background-color: #f1faee57; 
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+
+
+.container-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+}
+
+/* ----------------- Tarjetas de plantas ----------------- */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #00fffc;
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 0 0 12px 12px;
+    flex-grow: 1;
+}
+
+.card-img-top {
+    height: 250px;
+    width: 100%;
+    object-fit: contain;
+    background-color: #f0f0f0;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.6);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+}
+
+.card-text {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+
+}
+
+/* ----------------- Formularios ----------------- */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    color: #000;
+    position: relative;
+    z-index: 1;
+}
+
+form .btn {
+    min-width: 140px;
+}
+
+/* ----------------- Mensajes ----------------- */
+.success-message {
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ----------------- Recuadro de botones ----------------- */
+.action-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+/* ----------------- Buscador ----------------- */
+.search-input {
+    flex: 2;
+    min-width: 400px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #a8d5ba;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    .search-button:hover {
+        background-color: #91c9a0;
+        transform: translateY(-2px);
+    }
+
+/* ----------------- Botones generales ----------------- */
+.action-btn, .btn-pastel, .btn-cancel-pastel {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a8dadc;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+    .action-btn:hover,
+    .btn-pastel:hover,
+    .btn-cancel-pastel:hover {
+        background-color: #89c2c9;
+        color: #000;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+/* ----------------- Botones dentro de tarjetas ----------------- */
+.card .btn-action {
+    background-color: #a3d2ca;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin: 2px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .card .btn-action:hover {
+        background-color: #7fbfb3;
+        transform: translateY(-2px);
+    }
+
+/* ----------------- Específicos vista Borrar ----------------- */
+.borrar-container {
+    background-color: #fefefe;
+}
+
+    .borrar-container .card {
+        background-color: #fdfdfd;
+        border: 1px solid #ccc;
+    }
+
+    .borrar-container .card-body {
+        background-color: #ffffff;
+        color: #000;
+    }

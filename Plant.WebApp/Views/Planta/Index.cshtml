@@ -1,0 +1,63 @@
+﻿@using Plant.WebApp.Models
+@model IEnumerable<Planta>?
+
+@{
+    ViewData["Title"] = "Buscar Plantas";
+}
+
+<h1 class="titulo-buscador text-center mb-4">🌿 Buscador de Plantas</h1>
+
+<!-- Recuadro principal que incluye buscador + botones -->
+<div class="action-box mb-4 mx-auto">
+
+    <!-- Formulario de búsqueda -->
+    <form asp-action="Index" method="get" class="d-flex justify-content-center gap-2 mb-3 flex-wrap">
+        <input type="text" name="texto" class="form-control search-input" placeholder="Escribe el nombre de la planta..." />
+        <button type="submit" class="action-btn search-btn">Buscar</button>
+    </form>
+
+    <!-- Botones de acción -->
+    <div class="action-buttons">
+        <a asp-action="Insertar" class="action-btn">Insertar planta</a>
+        <a asp-action="MostrarTodas" class="action-btn">Mostrar todas las plantas</a>
+    </div>
+
+</div>
+
+
+<!-- Mensaje si no hay resultados -->
+@if (Model == null || !Model.Any())
+{
+    <div class="no-results-wrapper text-center">
+        <p class="no-results-message">🌱 Todavía no hay búsqueda o resultados.</p>
+    </div>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var planta in Model)
+        {
+            <div class="col">
+                <div class="card h-100 bg-dark text-white">
+                    <img src="@planta.ImagenUrl" class="card-img-top" alt="@planta.Nombre" />
+                    <div class="card-body">
+                        <h5 class="card-title">@planta.Nombre</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@planta.NombreCientifico</h6>
+                        <p class="card-text"><strong>Origen:</strong> @planta.Origen</p>
+                        <p class="card-text"><strong>Cuidados:</strong> @planta.CuidadosBasicos</p>
+                        <p class="card-text"><strong>Clima ideal:</strong> @planta.ClimaIdeal</p>
+                        <p class="card-text"><strong>Floración:</strong> @planta.Floracion</p>
+                        <p class="card-text"><strong>Altura máxima:</strong> @planta.AlturaMaxima</p>
+
+                        <div class="text-center mt-2">
+                            <a asp-action="Borrar" asp-route-id="@planta.Id" class="btn btn-action">Borrar</a>
+                            <a asp-action="Actualizar" asp-route-id="@planta.Id" class="btn btn-action">Actualizar</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
