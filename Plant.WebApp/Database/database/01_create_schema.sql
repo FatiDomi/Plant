@@ -1,0 +1,14 @@
+CREATE TABLE [dbo].[Plantas](
+    [Id] INT IDENTITY(1,1) NOT NULL,
+    [Nombre] NVARCHAR(100) NOT NULL,
+    [NombreCientifico] NVARCHAR(150) NOT NULL,
+    [Origen] NVARCHAR(150) NOT NULL,
+    [Descripcion] NVARCHAR(MAX) NOT NULL,
+    [CuidadosBasicos] NVARCHAR(MAX) NOT NULL,
+    [ClimaIdeal] NVARCHAR(150) NOT NULL,
+    [Floracion] NVARCHAR(100) NOT NULL,
+    [AlturaMaxima] NVARCHAR(100) NOT NULL,
+    [ImagenUrl] NVARCHAR(MAX) NOT NULL,
+    CONSTRAINT [PK_Plantas] PRIMARY KEY CLUSTERED ([Id] ASC)
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY];
+GO
