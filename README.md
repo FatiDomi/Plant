@@ -27,9 +27,9 @@ Aplicación web desarrollada con **ASP.NET MVC (C#)** que permite:
 
 
 ## 🛠️ Configuración de la base de datos
-Los scripts para crear la base de datos se encuentran en la carpeta [`/Plant.WebApp/Database`](./Plant.WebApp/Database):
+Los scripts para crear la base de datos se encuentran en la carpeta [`/Plant.WebApp/Database`](./Plant.WebApp/Database)
 
-1. Ejecuta [`/01_create_schema.sql`](./database/01_create_schema.sql) para crear las tablas.
+1. Ejecuta [`/Database/database/01_create_schema.sql`](./Database/database/01_create_schema.sql) para crear las tablas.
 2. Ejecuta [`/02_seed_data.sql`](./database/02_seed_data.sql) para insertar datos de ejemplo.
 
 👉 Más detalles en [`/database/README.md`](./database/README.md).
