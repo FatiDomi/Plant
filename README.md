@@ -52,3 +52,6 @@ Los scripts para crear la base de datos se encuentran en la carpeta [`/Plant.Web
   }
 }
 
+🎥 Demo
+
+Video explicativo sobre el funcionamiento de la página web (1-2 min):https://www.loom.com/share/165ffee75ffe4a289fc5c9889784f857?sid=909952fd-3f8c-4eda-b090-83a0d13a5520
