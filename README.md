@@ -16,6 +16,11 @@ Aplicación web desarrollada con **ASP.NET MVC (C#)** que permite:
 - [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](https://learn.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o [Azure Data Studio](https://learn.microsoft.com/azure-data-studio/download-azure-data-studio)
 
+## 🎥 Demo
+
+Video explicativo sobre el funcionamiento de la página web (1-2 min):https://www.loom.com/share/165ffee75ffe4a289fc5c9889784f857?sid=909952fd-3f8c-4eda-b090-83a0d13a5520
+
+
 ## 📂 Estructura del proyecto
 /Controllers → Controladores MVC
 
@@ -51,7 +56,3 @@ Los scripts para crear la base de datos se encuentran en la carpeta [`/Plant.Web
     "DefaultConnection": "Server=localhost;Database=PlantasDB;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 }
-
-🎥 Demo
-
-Video explicativo sobre el funcionamiento de la página web (1-2 min):https://www.loom.com/share/165ffee75ffe4a289fc5c9889784f857?sid=909952fd-3f8c-4eda-b090-83a0d13a5520
