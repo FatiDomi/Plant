@@ -39,7 +39,7 @@ Los scripts para crear la base de datos se encuentran en la carpeta [`/Plant.Web
 1. Ejecuta [`/Plant.WebApp/Database/database/01_create_schema.sql`](./Plant.WebApp/Database/database/01_create_schema.sql) para crear las tablas.
 2. Ejecuta [`/Plant.WebApp/Database/database/02_seed_data.sql`](./Plant.WebApp/Database/database/02_seed_data.sql) para insertar datos de ejemplo.
 
-👉 Más detalles en [`/Plant.WebApp/Database/database/README.md`](./database/README.md).
+👉 Más detalles en [`/Plant.WebApp/Database/database/README.md`](./Plant.WebApp/Database/database/README.md).
 
 ## ⚙️ Configuración del proyecto
 1. Abre el archivo `appsettings.json`.
