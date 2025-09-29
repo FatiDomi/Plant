@@ -5,8 +5,6 @@ Aplicación web desarrollada con **ASP.NET MVC (C#)** que permite:
 - Editar y eliminar registros existentes.
 - Consultar la información desde una base de datos SQL Server.
 
---
-
 ## 🛠️ Tecnologías
 - C# .NET (ASP.NET MVC)
 - Entity Framework
@@ -19,9 +17,3 @@ Aplicación web desarrollada con **ASP.NET MVC (C#)** que permite:
 3. Ejecutar el script `script_bbdd.sql` para crear la base de datos.
 4. Configurar la cadena de conexión en `appsettings.json`.
 5. Iniciar el proyecto en modo Debug.
-
-## 📷 Capturas
-*(aquí puedes poner 1 o 2 screenshots de la aplicación en uso)*
-
-## 🎥 Demo
-Video explicativo (2 min): [YouTube – no listado](enlace)
